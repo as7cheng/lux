@@ -1,4 +1,5 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { ExhibitionIndex } from "./Exhibitions";
 
 const turnstileSiteKey = import.meta.env.DEV
   ? "1x00000000000000000000AA"
@@ -196,23 +197,7 @@ export default function PhotographyPage() {
           </div>
         </section>
 
-        <section id="archive" className="photography-slide archive-preview" aria-label="Selected photography">
-          <header className="archive-header">
-            <span>Archive / 01</span>
-            <span>Selected works</span>
-          </header>
-          <figure className="archive-photo">
-            <img
-              src="https://images.anthonysc.com/photos/nyc-dream-001-v1.jpg"
-              alt="Selected photograph from Anthony Cheng's New York archive"
-              decoding="async"
-            />
-          </figure>
-          <footer className="archive-footer">
-            <span>© 2026 Anthony Cheng. All rights reserved.</span>
-            <span>No commercial use without prior written permission.</span>
-          </footer>
-        </section>
+        <ExhibitionIndex />
       </main>
 
       <section
