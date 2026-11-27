@@ -23,7 +23,7 @@ export function ExhibitionIndex() {
       <div className="exhibition-poster" key={slug}>
         <img src={cover.src} alt={cover.alt} decoding="async" />
         <em>{title}</em>
-        <a href={`?exhibition=${slug}`} aria-label={`walk in: ${title}`}>walk in</a>
+        <a href={`?exhibition=${slug}`} aria-label={`Walk in: ${title}`}>WALK IN</a>
       </div>
     ))}
     <Rights />
