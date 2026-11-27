@@ -41,6 +41,8 @@ export function ExhibitionIndex() {
           </article>
         ))}
       </div>
+    </section>
+    <section className="photography-slide rights-page" aria-label="Copyright notice">
       <Rights />
     </section>
   </>;
