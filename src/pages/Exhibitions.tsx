@@ -10,6 +10,8 @@ export const exhibitions = [{
   works: [newYork],
 }];
 
+const pastExhibitions = ["01", "02", "03", "04"];
+
 function Rights() {
   return <footer className="archive-footer">
     <span>© 2026 Anthony Cheng. All rights reserved.</span>
@@ -18,16 +20,30 @@ function Rights() {
 }
 
 export function ExhibitionIndex() {
-  return <section id="archive" className="photography-slide exhibition-index" aria-label="Exhibitions">
-    {exhibitions.map(({ slug, title, cover }) => (
-      <div className="exhibition-poster" key={slug}>
-        <img src={cover.src} alt={cover.alt} decoding="async" />
-        <em>{title}</em>
-        <a href={`?exhibition=${slug}`} aria-label={`Walk in: ${title}`}>WALK IN</a>
+  return <>
+    <section id="archive" className="photography-slide exhibition-index" aria-label="Current exhibition">
+      {exhibitions.map(({ slug, title, cover }) => (
+        <div className="exhibition-poster" key={slug}>
+          <img src={cover.src} alt={cover.alt} decoding="async" />
+          <em>{title}</em>
+          <a href={`?exhibition=${slug}`} aria-label={`Walk in: ${title}`}>WALK IN</a>
+        </div>
+      ))}
+    </section>
+
+    <section className="photography-slide past-exhibitions" aria-label="Past exhibitions">
+      <div className="past-exhibitions-grid">
+        {pastExhibitions.map((number) => (
+          <article className="past-exhibition" key={number}>
+            <img src={newYork.src} alt="" loading="lazy" decoding="async" />
+            <em>Past exhibition {number}</em>
+            <a href="?exhibition=dream-swallow-me">WALK IN</a>
+          </article>
+        ))}
       </div>
-    ))}
-    <Rights />
-  </section>;
+      <Rights />
+    </section>
+  </>;
 }
 
 export function ExhibitionRoom({ exhibition }: { exhibition: typeof exhibitions[number] }) {

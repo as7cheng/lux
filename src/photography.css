@@ -200,7 +200,7 @@ textarea {
   text-transform: uppercase;
 }
 
-.exhibition-index, .exhibition-room {
+.exhibition-index, .past-exhibitions, .exhibition-room {
   background: white;
   color: #171717;
 }
@@ -215,10 +215,6 @@ textarea {
   flex-direction: column;
   padding-top: clamp(2.6rem, 6vw, 4.8rem);
   padding-bottom: max(1.2rem, env(safe-area-inset-bottom));
-}
-
-.exhibition-index > .archive-footer {
-  margin-top: auto;
 }
 
 .exhibition-poster {
@@ -249,6 +245,47 @@ textarea {
 }
 
 .exhibition-poster a:hover { text-decoration-thickness: 2px; }
+
+.photography-slide.past-exhibitions {
+  min-height: 100svh;
+  padding-top: clamp(3.5rem, 8vw, 7rem);
+  padding-bottom: max(1.2rem, env(safe-area-inset-bottom));
+}
+
+.past-exhibitions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(4rem, 8vw, 8rem) clamp(1rem, 2vw, 2rem);
+}
+
+.past-exhibition {
+  display: grid;
+  align-content: start;
+  font: 1rem/1.35 Arial, sans-serif;
+}
+
+.past-exhibition img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+.past-exhibition a {
+  justify-self: start;
+  margin-top: 1rem;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+
+.past-exhibition a:hover { text-decoration-thickness: 2px; }
+
+.past-exhibitions > .archive-footer {
+  margin-top: clamp(5rem, 10vw, 9rem);
+}
+
 .exhibition-room { min-height: 100svh; padding: clamp(1.25rem, 4vw, 4rem); }
 .exhibition-room > a { color: inherit; }
 .exhibition-room h1 { font-size: clamp(2.5rem, 7vw, 7rem); font-weight: 400; margin: .5em 0; }
@@ -433,6 +470,11 @@ textarea {
 @media (max-width: 760px) {
   .photography-slide.exhibition-index {
     padding-top: max(2.6rem, calc(2 * env(safe-area-inset-top)));
+  }
+
+  .past-exhibitions-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
   .photography-page {
     height: 100svh;
