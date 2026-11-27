@@ -22,9 +22,8 @@ export function ExhibitionIndex() {
     {exhibitions.map(({ slug, title, cover }) => (
       <a className="exhibition-poster" key={slug} href={`?exhibition=${slug}`}>
         <img src={cover.src} alt="" decoding="async" />
-        <span>Anthony Cheng</span>
         <em>{title}</em>
-        <strong>Walk in</strong>
+        <strong>walk in</strong>
       </a>
     ))}
     <Rights />
