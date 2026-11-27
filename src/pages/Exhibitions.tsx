@@ -20,11 +20,11 @@ function Rights() {
 export function ExhibitionIndex() {
   return <section id="archive" className="photography-slide exhibition-index" aria-label="Exhibitions">
     {exhibitions.map(({ slug, title, cover }) => (
-      <a className="exhibition-poster" key={slug} href={`?exhibition=${slug}`}>
-        <img src={cover.src} alt="" decoding="async" />
+      <div className="exhibition-poster" key={slug}>
+        <img src={cover.src} alt={cover.alt} decoding="async" />
         <em>{title}</em>
-        <strong>walk in</strong>
-      </a>
+        <a href={`?exhibition=${slug}`} aria-label={`walk in: ${title}`}>walk in</a>
+      </div>
     ))}
     <Rights />
   </section>;

@@ -241,13 +241,16 @@ textarea {
   margin-bottom: 1.25rem;
 }
 
-.exhibition-poster strong {
+.exhibition-poster a {
+  justify-self: start;
+  font-weight: bold;
+  color: inherit;
   margin-top: 1rem;
   text-decoration: underline;
   text-underline-offset: .25em;
 }
 
-.exhibition-poster:hover strong { text-decoration-thickness: 2px; }
+.exhibition-poster a:hover { text-decoration-thickness: 2px; }
 .exhibition-room { min-height: 100svh; padding: clamp(1.25rem, 4vw, 4rem); }
 .exhibition-room > a { color: inherit; }
 .exhibition-room h1 { font-size: clamp(2.5rem, 7vw, 7rem); font-weight: 400; margin: .5em 0; }
