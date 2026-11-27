@@ -189,9 +189,9 @@ textarea {
 }
 
 .archive-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  justify-items: start;
+  gap: 0.25rem;
   color: #73716e;
   font-size: 0.64rem;
   font-weight: 500;
@@ -218,8 +218,6 @@ textarea {
 }
 
 .exhibition-index > .archive-footer {
-  display: grid;
-  gap: .25rem;
   margin-top: auto;
 }
 
