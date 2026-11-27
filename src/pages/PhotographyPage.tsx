@@ -168,9 +168,7 @@ export default function PhotographyPage() {
       <main className="photography-page">
         <section className="photography-slide photography-landing">
           <header className="photography-nav">
-            <a href="#archive">Portfolio</a>
             <nav aria-label="Photography">
-              <a href="https://anthonysc.com/?view=about">About</a>
               <button
                 type="button"
                 onClick={() => {
@@ -203,21 +201,15 @@ export default function PhotographyPage() {
       <section
         className={`contact-panel ${contactOpen ? "is-open" : ""}`}
         aria-hidden={!contactOpen}
-        aria-labelledby="contact-title"
+        aria-label="Contact"
       >
         <header className="contact-header">
-          <span>New York · available worldwide</span>
           <button type="button" onClick={() => setContactOpen(false)}>
             Close
           </button>
         </header>
 
         <div className="contact-content">
-          <div className="contact-heading">
-            <p>Contact</p>
-            <h2 id="contact-title">Let&apos;s make something memorable.</h2>
-          </div>
-
           {submitState === "success" ? (
             <div className="contact-success" role="status">
               <p>Thank you.</p>
