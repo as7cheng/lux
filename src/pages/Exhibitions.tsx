@@ -19,7 +19,6 @@ function Rights() {
 
 export function ExhibitionIndex() {
   return <section id="archive" className="photography-slide exhibition-index" aria-label="Exhibitions">
-    <h2>Exhibitions</h2>
     {exhibitions.map(({ slug, title, cover }) => (
       <a className="exhibition-poster" key={slug} href={`?exhibition=${slug}`}>
         <img src={cover.src} alt="" decoding="async" />

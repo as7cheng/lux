@@ -205,7 +205,7 @@ textarea {
   color: #171717;
 }
 
-.exhibition-index h2, .exhibition-room > a {
+.exhibition-room > a {
   margin: 0 0 1.25rem;
   font: 500 .875rem/1.4 Arial, sans-serif;
 }
